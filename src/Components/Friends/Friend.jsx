@@ -66,7 +66,7 @@ const Friends = () => {
         setLoading(false);
       })
       .catch(() => {
-        // Fallback removed for brevity, keep your original fallback here if needed
+
         setLoading(false);
       });
   }, []);

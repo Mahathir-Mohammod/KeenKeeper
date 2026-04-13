@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Banner from './Components/Banner/Banner'
 import Footer from './Components/Footer/Footer'
 import Friends from './Components/Friends/Friend'
+import FriendDetail from './Components/Friends/FriendDetail' 
 
 function Home() {
   return (
@@ -27,11 +28,15 @@ function FriendsPage() {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/friends" element={<FriendsPage />} />
-      </Routes>
+      <Navbar /> 
+      <main className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/friend/:id" element={<FriendDetail />} /> 
+        </Routes>
+      </main>
+      <Footer />
     </BrowserRouter>
   )
 }
