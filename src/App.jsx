@@ -11,7 +11,6 @@ function Home() {
     <>
       <Banner />
       <Friends />
-      <Footer />
     </>
   )
 }
@@ -20,7 +19,6 @@ function FriendsPage() {
   return (
     <>
       <Friends />
-      <Footer />
     </>
   )
 }
