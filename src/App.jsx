@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom'
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Banner from './Components/Banner/Banner'
@@ -20,21 +20,30 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <main className="min-h-screen">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/friends" element={<Friends />} />
-          <Route path="/friend/:id" element={<FriendDetail />} />
-          <Route path="/timeline" element={<Timeline />} />
-          <Route path="/stats" element={<Stats />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
-  )
+    <RouterProvider router={createBrowserRouter([
+      {
+        path: "/",
+        element: (
+          <>
+            <Navbar />
+            <main className="min-h-screen">
+              <Outlet />
+            </main>
+            <Footer />
+          </>
+        ),
+        children: [
+          { index: true, element: <Home /> },
+          { path: "friends", element: <Friends /> },
+          { path: "friend/:id", element: <FriendDetail /> },
+          { path: "timeline", element: <Timeline /> },
+          { path: "stats", element: <Stats /> },
+          { path: "*", element: <NotFound /> },
+        ]
+      }
+    ])} 
+  />
+  );
 }
 
 export default App
