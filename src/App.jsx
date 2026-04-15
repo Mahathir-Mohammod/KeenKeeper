@@ -7,6 +7,7 @@ import Friends from './Components/Friends/Friend'
 import FriendDetail from './Components/Friends/FriendDetail'
 import Timeline from './Components/Timeline/Timeline'
 import Stats from './Components/Stats/Stats'
+import NotFound from './Components/NotFound/NotFound'
 
 function Home() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/friend/:id" element={<FriendDetail />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
