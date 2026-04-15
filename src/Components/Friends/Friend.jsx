@@ -29,7 +29,7 @@ const FriendCard = ({ friend }) => {
           )}&background=1e4035&color=fff`;
         }}
       />
-      <h3 className="text-[1rem] font-bold text-[#1a2e26] m-0 text-center font-serif">
+      <h3 className="text-[1rem] font-bold text-[#1a2e26] m-0 text-center">
         {friend.name}
       </h3>
       <p className="text-[0.78rem] text-[#8fa89e] m-0">
