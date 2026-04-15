@@ -6,19 +6,12 @@ import Footer from './Components/Footer/Footer'
 import Friends from './Components/Friends/Friend'
 import FriendDetail from './Components/Friends/FriendDetail'
 import Timeline from './Components/Timeline/Timeline'
+import Stats from './Components/Stats/Stats'
 
 function Home() {
   return (
     <>
       <Banner />
-      <Friends />
-    </>
-  )
-}
-
-function FriendsPage() {
-  return (
-    <>
       <Friends />
     </>
   )
@@ -31,9 +24,10 @@ function App() {
       <main className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/friends" element={<FriendsPage />} />
+          <Route path="/friends" element={<Friends />} />
           <Route path="/friend/:id" element={<FriendDetail />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/stats" element={<Stats />} />
         </Routes>
       </main>
       <Footer />

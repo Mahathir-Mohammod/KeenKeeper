@@ -17,9 +17,7 @@ const Timeline = () => {
     if (stored) {
       setInteractions(JSON.parse(stored));
     } else {
-      const seed = [
-        { id: 1, type: "Meetup", with: "Tom Baker", date: "March 29, 2026" },
-      ];
+      const seed = [];
       localStorage.setItem("timeline", JSON.stringify(seed));
       setInteractions(seed);
     }
