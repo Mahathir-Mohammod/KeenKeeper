@@ -126,7 +126,7 @@ const FriendDetail = () => {
                 </div>
               </div>
               <p className="text-sm text-slate-500 italic mb-2">"{friend.bio}"</p>
-              <p className="text-xs text-slate-400">Preferred: email</p>
+              <p className="text-xs text-slate-400">Email:- {friend.email}</p>
             </div>
 
             <div className="bg-white border border-slate-200 rounded-xl flex flex-col divide-y divide-slate-100 shadow-sm overflow-hidden">
@@ -194,11 +194,8 @@ const FriendDetail = () => {
                 <h3 className="font-semibold text-[#1e4035]">Recent Interactions</h3>
                 <button
                   onClick={() => navigate("/timeline")}
-                  className="text-xs border border-slate-200 px-3 py-1.5 rounded text-slate-600 hover:bg-slate-50 font-medium flex items-center gap-1.5"
-                >
-                  <History className="w-3.5 h-3.5" />
-                  Full History
-                </button>
+                  className="text-xs border border-slate-200 px-3 py-1.5 rounded text-slate-600 hover:bg-slate-50 font-medium flex items-center gap-1.5">
+                  <History className="w-3.5 h-3.5" />Full History</button>
               </div>
               <div className="flex flex-col divide-y divide-slate-100">
                 {recentInteractions.map((interaction, index) => {

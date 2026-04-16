@@ -51,7 +51,7 @@ const Timeline = () => {
 
         <div className="flex flex-col border-t border-slate-200">
           {filtered.length === 0 ? (
-            <p className="py-12 text-slate-400 text-sm text-center">No interactions yet.</p>
+            <p className="py-12 text-slate-400 text-3xl text-center">No interactions yet.</p>
           ) : (
             filtered.map((item, index) => {
               const config = iconMap[item.type] || iconMap.Text;
